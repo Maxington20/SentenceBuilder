@@ -1,12 +1,62 @@
-﻿<Window x:Class="SentenceBuilder.MainWindow"
+﻿<Window x:Name="The_Sentence_Builder" x:Class="SentenceBuilder.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SentenceBuilder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="The Sentence Builder" Height="325" Width="525" ResizeMode="NoResize">
+	<Grid Background="#FF322778" Margin="0,0,0,-21">
+		<Button x:Name="Clear_Button" Content="Clear" HorizontalAlignment="Left" Margin="261,168,0,0" VerticalAlignment="Top" Width="75" Click="Clear_Click" IsEnabled="False" Background="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+			<Button.Effect>
+				<DropShadowEffect/>
+			</Button.Effect>
+		</Button>
+		<TextBox x:Name="Sentence_Box" HorizontalAlignment="Left" Height="51" Margin="261,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" IsReadOnly="True" FontSize="16" FontFamily="Trebuchet MS" VerticalContentAlignment="Center">
+			<TextBox.Effect>
+				<DropShadowEffect/>
+			</TextBox.Effect>
+		</TextBox>
+		<Label x:Name="Verb_Label" Content="Verbs" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Background="White" Width="75" HorizontalContentAlignment="Center" ToolTip="A word used to describe an action" FontWeight="Bold" VerticalContentAlignment="Center" Cursor="Arrow">
+			<Label.ContextMenu>
+				<ContextMenu/>
+			</Label.ContextMenu>
+			<Label.Effect>
+				<DropShadowEffect/>
+			</Label.Effect>
+		</Label>
+		<Label x:Name="Adjective_Label" Content="Adjectives" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" Background="White" Width="75" HorizontalContentAlignment="Center" ToolTip="A word or phrase naming an attribute, added to a noun to describe it" FontWeight="Bold" VerticalContentAlignment="Center">
+			<Label.Effect>
+				<DropShadowEffect/>
+			</Label.Effect>
+		</Label>
+		<Label x:Name="Noun_Label" Content="Nouns" HorizontalAlignment="Left" Margin="170,59,0,0" VerticalAlignment="Top" Background="White" Width="75" HorizontalContentAlignment="Center" ToolTip="A word used to identify any of a class of people, places, or things" FontWeight="Bold" VerticalContentAlignment="Center">
+			<Label.Effect>
+				<DropShadowEffect/>
+			</Label.Effect>
+		</Label>
+		<Button x:Name="Kick_Verb" Content="Kick" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="75" Click="Kick_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Kiss_Verb" Content="Kiss" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="75" Click="Kiss_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Throw_Verb" Content="Throw" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="75" Click="Throw_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Stinky_Adjective" Content="Stinky" HorizontalAlignment="Left" Margin="90,108,0,0" VerticalAlignment="Top" Width="75" Click="Stinky_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Eat_Verb" Content="Eat" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="75" Click="Eat_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Sing_Verb" Content="Sing" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="75" Click="Sing_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Yell_Verb" Content="Yell" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="75" Click="Yell_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Marry_Verb" Content="Marry" HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top" Width="75" Click="Marry_Verb_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Sexy_Adjective" Content="Sexy" HorizontalAlignment="Left" Margin="90,133,0,0" VerticalAlignment="Top" Width="75" Click="Sexy_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Drunken_Adjective" Content="Drunken" HorizontalAlignment="Left" Margin="90,158,0,0" VerticalAlignment="Top" Width="75" Click="Drunken_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Ugly_Adjective" Content="Ugly" HorizontalAlignment="Left" Margin="90,183,0,0" VerticalAlignment="Top" Width="75" Click="Ugly_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Smart_Adjective" Content="Smart" HorizontalAlignment="Left" Margin="90,208,0,0" VerticalAlignment="Top" Width="75" Click="Smart_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Funny_Adjective" Content="Funny" HorizontalAlignment="Left" Margin="90,233,0,0" VerticalAlignment="Top" Width="75" Click="Funny_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Messy_Adjective" Content="Messy" HorizontalAlignment="Left" Margin="90,258,0,0" VerticalAlignment="Top" Width="75" Click="Messy_Adjective_Click" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Pirate_Noun" Content="Pirate" HorizontalAlignment="Left" Margin="170,108,0,0" VerticalAlignment="Top" Width="75" Click="Pirate_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="King_Noun" Content="King" HorizontalAlignment="Left" Margin="170,133,0,0" VerticalAlignment="Top" Width="75" Click="King_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Queen_Noun" Content="Queen" HorizontalAlignment="Left" Margin="170,158,0,0" VerticalAlignment="Top" Width="75" Click="Queen_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Doctor_Noun" Content="Doctor" HorizontalAlignment="Left" Margin="170,183,0,0" VerticalAlignment="Top" Width="75" Click="Doctor_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Magician_Noun" Content="Magician" HorizontalAlignment="Left" Margin="170,208,0,0" VerticalAlignment="Top" Width="75" Click="Magician_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Clown_Noun" Content="Clown" HorizontalAlignment="Left" Margin="170,233,0,0" VerticalAlignment="Top" Width="75" Click="Clown_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Button x:Name="Zombie_Noun" Content="Zombie" HorizontalAlignment="Left" Margin="170,258,0,0" VerticalAlignment="Top" Width="75" Click="Zombie_Noun_Click" IsEnabled="False" Background="White" Cursor="Hand" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<Label Content="Build a Sentence" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="235" HorizontalContentAlignment="Center" Background="#FF322778" FontWeight="Bold" FontSize="22" Foreground="White" VerticalContentAlignment="Center"/>
+
+	</Grid>
 </Window>
